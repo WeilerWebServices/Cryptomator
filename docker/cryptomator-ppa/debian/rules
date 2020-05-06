@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod a+x debian/cryptomator/usr/lib/cryptomator/cryptomator-*.AppImage
+
+override_dh_strip:
+	# no-op

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.cryptomator</groupId>
+	<artifactId>main</artifactId>
+	<version>1.6.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Cryptomator</name>
+
+	<organization>
+		<name>cryptomator.org</name>
+		<url>https://cryptomator.org</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>Sebastian Stenzel</name>
+			<email>sebastian.stenzel@gmail.com</email>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- cryptomator dependencies -->
+		<cryptomator.cryptofs.version>1.9.10</cryptomator.cryptofs.version>
+		<cryptomator.jni.version>2.2.2</cryptomator.jni.version>
+		<cryptomator.fuse.version>1.2.3</cryptomator.fuse.version>
+		<cryptomator.dokany.version>1.1.14</cryptomator.dokany.version>
+		<cryptomator.webdav.version>1.0.11</cryptomator.webdav.version>
+
+		<!-- 3rd party dependencies -->
+		<javafx.version>14</javafx.version>
+		<commons-lang3.version>3.9</commons-lang3.version>
+		<jwt.version>3.10.2</jwt.version>
+		<easybind.version>1.0.3</easybind.version>
+		<guava.version>28.2-jre</guava.version>
+		<dagger.version>2.27</dagger.version>
+		<gson.version>2.8.6</gson.version>
+		<slf4j.version>1.7.30</slf4j.version>
+		<logback.version>1.2.3</logback.version>
+
+		<!-- test dependencies -->
+		<junit.jupiter.version>5.6.1</junit.jupiter.version>
+		<mockito.version>3.3.3</mockito.version>
+		<hamcrest.version>2.2</hamcrest.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- modules -->
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>commons</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>keychain</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>ui</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>launcher</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- Cryptomator Libs -->
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>siv-mode</artifactId>
+				<version>1.4.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>cryptofs</artifactId>
+				<version>${cryptomator.cryptofs.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>fuse-nio-adapter</artifactId>
+				<version>${cryptomator.fuse.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>dokany-nio-adapter</artifactId>
+				<version>${cryptomator.dokany.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>webdav-nio-adapter</artifactId>
+				<version>${cryptomator.webdav.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cryptomator</groupId>
+				<artifactId>jni</artifactId>
+				<version>${cryptomator.jni.version}</version>
+			</dependency>
+
+			<!-- JavaFX -->
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-base</artifactId>
+				<version>${javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-graphics</artifactId>
+				<version>${javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-controls</artifactId>
+				<version>${javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-fxml</artifactId>
+				<version>${javafx.version}</version>
+			</dependency>
+
+			<!-- Logging -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-core</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+
+			<!-- Apache Commons -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+			
+			<!-- JWT -->
+			<dependency>
+				<groupId>com.auth0</groupId>
+				<artifactId>java-jwt</artifactId>
+				<version>${jwt.version}</version>
+			</dependency>
+
+			<!-- EasyBind -->
+			<dependency>
+				<groupId>org.fxmisc.easybind</groupId>
+				<artifactId>easybind</artifactId>
+				<version>${easybind.version}</version>
+			</dependency>
+
+			<!-- Google -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.dagger</groupId>
+				<artifactId>dagger</artifactId>
+				<version>${dagger.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>${gson.version}</version>
+			</dependency>
+
+			<!-- JUnit / Mockito / Hamcrest -->
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter</artifactId>
+				<version>${junit.jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>${mockito.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest</artifactId>
+				<version>${hamcrest.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-swing</artifactId>
+				<version>${javafx.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- common dependencies for all modules -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<modules>
+		<module>commons</module>
+		<module>keychain</module>
+		<module>ui</module>
+		<module>launcher</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<modules>
+				<module>buildkit</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>coverage</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>3.1.2</version>
+					<executions>
+						<execution>
+							<id>copy-libs</id>
+							<goals>
+								<goal>copy-dependencies</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${project.build.directory}/libs</outputDirectory>
+								<includeScope>runtime</includeScope>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>2.0.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.2.0</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<!-- adds Implementation-Version which can be read during runtime -->
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.8.5</version>
+					<executions>
+						<execution>
+							<id>prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>report</id>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<excludes>
+							<exclude>**/*_*</exclude>
+							<exclude>**/Dagger*</exclude>
+						</excludes>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>14</release>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>com.google.dagger</groupId>
+							<artifactId>dagger-compiler</artifactId>
+							<version>${dagger.version}</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

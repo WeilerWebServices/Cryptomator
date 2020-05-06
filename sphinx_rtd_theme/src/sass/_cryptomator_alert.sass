@@ -1,0 +1,27 @@
+//Crpytomator fitted info alerts
+
+.wy-alert
+  padding: $base-line-height / 2
+  line-height: $base-line-height
+  margin-bottom: $base-line-height
+  background: $primary-lighter
+  +font-smooth
+.wy-alert-title
+  color: $white
+  font-weight: bold
+  display: block
+  color: $white
+  background: $primary
+  margin: -$base-line-height / 2
+  padding: $base-line-height / 4 $base-line-height / 2
+  margin-bottom: $base-line-height / 2
+
+.wy-alert.wy-alert-info
+  background: $primary-lighter
+  .wy-alert-title
+    background: $primary
+
+.wy-alert.wy-alert-warning
+  background: lighten($orange,40%)
+  .wy-alert-title
+    background: lighten($orange,10%)

@@ -1,0 +1,721 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		742F0F931D79E028002E261F /* ciphertext_v5.aes in Resources */ = {isa = PBXBuildFile; fileRef = 742F0F921D79E005002E261F /* ciphertext_v5.aes */; };
+		742F0F941D79E02A002E261F /* ciphertext_v3.aes in Resources */ = {isa = PBXBuildFile; fileRef = 742F0F911D79E005002E261F /* ciphertext_v3.aes */; };
+		74345BF41D86D666003B96C5 /* SETOCryptorProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74345BF31D86D666003B96C5 /* SETOCryptorProviderTests.m */; };
+		747C755F1D79C950002EAD3B /* SETOCryptorV5.h in Headers */ = {isa = PBXBuildFile; fileRef = 747C755D1D79C950002EAD3B /* SETOCryptorV5.h */; };
+		747C75601D79C950002EAD3B /* SETOCryptorV5.m in Sources */ = {isa = PBXBuildFile; fileRef = 747C755E1D79C950002EAD3B /* SETOCryptorV5.m */; };
+		747C75621D79D33A002EAD3B /* SETOCryptorV5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 747C75611D79D33A002EAD3B /* SETOCryptorV5Tests.m */; };
+		74941E2F232924E200E307D6 /* SETOCryptorV7.h in Headers */ = {isa = PBXBuildFile; fileRef = 74941E2D232924E200E307D6 /* SETOCryptorV7.h */; };
+		74941E30232924E200E307D6 /* SETOCryptorV7.m in Sources */ = {isa = PBXBuildFile; fileRef = 74941E2E232924E200E307D6 /* SETOCryptorV7.m */; };
+		74941E332329397900E307D6 /* NSData+SETOBase64urlEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 74941E312329397900E307D6 /* NSData+SETOBase64urlEncoding.h */; };
+		74941E342329397900E307D6 /* NSData+SETOBase64urlEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 74941E322329397900E307D6 /* NSData+SETOBase64urlEncoding.m */; };
+		749BD1CC232BBAE2005AE472 /* SETOCryptorV7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 749BD1CB232BBAE2005AE472 /* SETOCryptorV7Tests.m */; };
+		74A9FE801D1AD5C2000399B6 /* SETOCryptorV3.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A9FE7E1D1AD5C2000399B6 /* SETOCryptorV3.h */; };
+		74A9FE811D1AD5C2000399B6 /* SETOCryptorV3.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A9FE7F1D1AD5C2000399B6 /* SETOCryptorV3.m */; };
+		74A9FE8E1D1C0714000399B6 /* SETOCryptorProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A9FE8C1D1C0714000399B6 /* SETOCryptorProvider.h */; };
+		74A9FE8F1D1C0714000399B6 /* SETOCryptorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A9FE8D1D1C0714000399B6 /* SETOCryptorProvider.m */; };
+		74C6B5B6205BCFB0000F04F9 /* insecure_memzero.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C6B5B4205BCFB0000F04F9 /* insecure_memzero.h */; };
+		74C6B5B7205BCFB0000F04F9 /* insecure_memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 74C6B5B5205BCFB0000F04F9 /* insecure_memzero.c */; };
+		74CBDF7B1C58342F0055121F /* SETOCryptomatorCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDF7A1C58342F0055121F /* SETOCryptomatorCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CBDF821C58342F0055121F /* SETOCryptomatorCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CBDF771C58342F0055121F /* SETOCryptomatorCryptor.framework */; };
+		74CBDF871C58342F0055121F /* SETOCryptorV3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDF861C58342F0055121F /* SETOCryptorV3Tests.m */; };
+		74CBDFA01C5834EF0055121F /* SETOAesSivCipherUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDF941C5834EF0055121F /* SETOAesSivCipherUtil.c */; };
+		74CBDFA11C5834EF0055121F /* SETOAesSivCipherUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDF951C5834EF0055121F /* SETOAesSivCipherUtil.h */; };
+		74CBDFA21C5834EF0055121F /* SETOAsyncCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDF961C5834EF0055121F /* SETOAsyncCryptor.h */; };
+		74CBDFA31C5834EF0055121F /* SETOAsyncCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDF971C5834EF0055121F /* SETOAsyncCryptor.m */; };
+		74CBDFA41C5834EF0055121F /* SETOCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDF981C5834EF0055121F /* SETOCryptor.h */; };
+		74CBDFA51C5834EF0055121F /* SETOCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDF991C5834EF0055121F /* SETOCryptor.m */; };
+		74CBDFA61C5834EF0055121F /* SETOCryptoSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDF9A1C5834EF0055121F /* SETOCryptoSupport.c */; };
+		74CBDFA71C5834EF0055121F /* SETOCryptoSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDF9B1C5834EF0055121F /* SETOCryptoSupport.h */; };
+		74CBDFA81C5834EF0055121F /* SETOMasterKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDF9C1C5834EF0055121F /* SETOMasterKey.h */; };
+		74CBDFA91C5834EF0055121F /* SETOMasterKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDF9D1C5834EF0055121F /* SETOMasterKey.m */; };
+		74CBDFAD1C5834F30055121F /* e_aeswrap.c in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDFAB1C5834F30055121F /* e_aeswrap.c */; };
+		74CBDFAE1C5834F30055121F /* e_aeswrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDFAC1C5834F30055121F /* e_aeswrap.h */; };
+		74CBDFB51C5834F70055121F /* crypto_scrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDFB01C5834F70055121F /* crypto_scrypt.c */; };
+		74CBDFB61C5834F70055121F /* crypto_scrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDFB11C5834F70055121F /* crypto_scrypt.h */; };
+		74CBDFB71C5834F70055121F /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDFB21C5834F70055121F /* sha256.c */; };
+		74CBDFB81C5834F70055121F /* sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDFB31C5834F70055121F /* sha256.h */; };
+		74CBDFB91C5834F70055121F /* sysendian.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CBDFB41C5834F70055121F /* sysendian.h */; };
+		74CBDFBB1C58350C0055121F /* SETOAesSivCipherUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CBDFBA1C58350C0055121F /* SETOAesSivCipherUtilTests.m */; };
+		74E6185A1C69131D0062027B /* cleartext.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74E618561C69131D0062027B /* cleartext.jpg */; };
+		74E9382A1EF8746B0031FC29 /* SETOCryptorV6.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E938281EF8746B0031FC29 /* SETOCryptorV6.h */; };
+		74E9382B1EF8746B0031FC29 /* SETOCryptorV6.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E938291EF8746B0031FC29 /* SETOCryptorV6.m */; };
+		74E938301EF87A710031FC29 /* SETOCryptorV4.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E9382E1EF87A710031FC29 /* SETOCryptorV4.h */; };
+		74E938311EF87A710031FC29 /* SETOCryptorV4.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9382F1EF87A710031FC29 /* SETOCryptorV4.m */; };
+		C345941DF521F549EF62BB34 /* libPods-SETOCryptomatorCryptor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E98F76390874E0CCD120A4 /* libPods-SETOCryptomatorCryptor.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74CBDF831C58342F0055121F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74CBDF6E1C58342F0055121F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74CBDF761C58342F0055121F;
+			remoteInfo = SETOCryptomatorCryptor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		742F0F911D79E005002E261F /* ciphertext_v3.aes */ = {isa = PBXFileReference; lastKnownFileType = file; path = ciphertext_v3.aes; sourceTree = "<group>"; };
+		742F0F921D79E005002E261F /* ciphertext_v5.aes */ = {isa = PBXFileReference; lastKnownFileType = file; path = ciphertext_v5.aes; sourceTree = "<group>"; };
+		74345BF31D86D666003B96C5 /* SETOCryptorProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorProviderTests.m; sourceTree = "<group>"; };
+		747C755D1D79C950002EAD3B /* SETOCryptorV5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOCryptorV5.h; sourceTree = "<group>"; };
+		747C755E1D79C950002EAD3B /* SETOCryptorV5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV5.m; sourceTree = "<group>"; };
+		747C75611D79D33A002EAD3B /* SETOCryptorV5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV5Tests.m; sourceTree = "<group>"; };
+		74941E2D232924E200E307D6 /* SETOCryptorV7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SETOCryptorV7.h; sourceTree = "<group>"; };
+		74941E2E232924E200E307D6 /* SETOCryptorV7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV7.m; sourceTree = "<group>"; };
+		74941E312329397900E307D6 /* NSData+SETOBase64urlEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+SETOBase64urlEncoding.h"; sourceTree = "<group>"; };
+		74941E322329397900E307D6 /* NSData+SETOBase64urlEncoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+SETOBase64urlEncoding.m"; sourceTree = "<group>"; };
+		749BD1CB232BBAE2005AE472 /* SETOCryptorV7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV7Tests.m; sourceTree = "<group>"; };
+		74A9FE7E1D1AD5C2000399B6 /* SETOCryptorV3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOCryptorV3.h; sourceTree = "<group>"; };
+		74A9FE7F1D1AD5C2000399B6 /* SETOCryptorV3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV3.m; sourceTree = "<group>"; };
+		74A9FE8C1D1C0714000399B6 /* SETOCryptorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOCryptorProvider.h; sourceTree = "<group>"; };
+		74A9FE8D1D1C0714000399B6 /* SETOCryptorProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorProvider.m; sourceTree = "<group>"; };
+		74C6B5B4205BCFB0000F04F9 /* insecure_memzero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insecure_memzero.h; sourceTree = "<group>"; };
+		74C6B5B5205BCFB0000F04F9 /* insecure_memzero.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insecure_memzero.c; sourceTree = "<group>"; };
+		74CBDF771C58342F0055121F /* SETOCryptomatorCryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SETOCryptomatorCryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CBDF7A1C58342F0055121F /* SETOCryptomatorCryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SETOCryptomatorCryptor.h; sourceTree = "<group>"; };
+		74CBDF7C1C58342F0055121F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74CBDF811C58342F0055121F /* SETOCryptomatorCryptorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SETOCryptomatorCryptorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CBDF861C58342F0055121F /* SETOCryptorV3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV3Tests.m; sourceTree = "<group>"; };
+		74CBDF941C5834EF0055121F /* SETOAesSivCipherUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SETOAesSivCipherUtil.c; sourceTree = "<group>"; };
+		74CBDF951C5834EF0055121F /* SETOAesSivCipherUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOAesSivCipherUtil.h; sourceTree = "<group>"; };
+		74CBDF961C5834EF0055121F /* SETOAsyncCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOAsyncCryptor.h; sourceTree = "<group>"; };
+		74CBDF971C5834EF0055121F /* SETOAsyncCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOAsyncCryptor.m; sourceTree = "<group>"; };
+		74CBDF981C5834EF0055121F /* SETOCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOCryptor.h; sourceTree = "<group>"; };
+		74CBDF991C5834EF0055121F /* SETOCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOCryptor.m; sourceTree = "<group>"; };
+		74CBDF9A1C5834EF0055121F /* SETOCryptoSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SETOCryptoSupport.c; sourceTree = "<group>"; };
+		74CBDF9B1C5834EF0055121F /* SETOCryptoSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOCryptoSupport.h; sourceTree = "<group>"; };
+		74CBDF9C1C5834EF0055121F /* SETOMasterKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETOMasterKey.h; sourceTree = "<group>"; };
+		74CBDF9D1C5834EF0055121F /* SETOMasterKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOMasterKey.m; sourceTree = "<group>"; };
+		74CBDFAB1C5834F30055121F /* e_aeswrap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = e_aeswrap.c; sourceTree = "<group>"; };
+		74CBDFAC1C5834F30055121F /* e_aeswrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = e_aeswrap.h; sourceTree = "<group>"; };
+		74CBDFB01C5834F70055121F /* crypto_scrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_scrypt.c; sourceTree = "<group>"; };
+		74CBDFB11C5834F70055121F /* crypto_scrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scrypt.h; sourceTree = "<group>"; };
+		74CBDFB21C5834F70055121F /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
+		74CBDFB31C5834F70055121F /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
+		74CBDFB41C5834F70055121F /* sysendian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysendian.h; sourceTree = "<group>"; };
+		74CBDFBA1C58350C0055121F /* SETOAesSivCipherUtilTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETOAesSivCipherUtilTests.m; sourceTree = "<group>"; };
+		74E618561C69131D0062027B /* cleartext.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cleartext.jpg; sourceTree = "<group>"; };
+		74E618581C69131D0062027B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E938281EF8746B0031FC29 /* SETOCryptorV6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SETOCryptorV6.h; sourceTree = "<group>"; };
+		74E938291EF8746B0031FC29 /* SETOCryptorV6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV6.m; sourceTree = "<group>"; };
+		74E9382E1EF87A710031FC29 /* SETOCryptorV4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SETOCryptorV4.h; sourceTree = "<group>"; };
+		74E9382F1EF87A710031FC29 /* SETOCryptorV4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SETOCryptorV4.m; sourceTree = "<group>"; };
+		77691E737EDB5B85329FEB98 /* Pods-SETOCryptomatorCryptor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SETOCryptomatorCryptor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SETOCryptomatorCryptor/Pods-SETOCryptomatorCryptor.debug.xcconfig"; sourceTree = "<group>"; };
+		B8E98F76390874E0CCD120A4 /* libPods-SETOCryptomatorCryptor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SETOCryptomatorCryptor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49C11DE4F20EB91B39137EB /* Pods-SETOCryptomatorCryptor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SETOCryptomatorCryptor.release.xcconfig"; path = "Pods/Target Support Files/Pods-SETOCryptomatorCryptor/Pods-SETOCryptomatorCryptor.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74CBDF731C58342F0055121F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C345941DF521F549EF62BB34 /* libPods-SETOCryptomatorCryptor.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CBDF7E1C58342F0055121F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CBDF821C58342F0055121F /* SETOCryptomatorCryptor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		324A7FFB0DE42FACE6594DEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8E98F76390874E0CCD120A4 /* libPods-SETOCryptomatorCryptor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		747C755C1D79C92C002EAD3B /* Version 5 */ = {
+			isa = PBXGroup;
+			children = (
+				747C755D1D79C950002EAD3B /* SETOCryptorV5.h */,
+				747C755E1D79C950002EAD3B /* SETOCryptorV5.m */,
+			);
+			path = "Version 5";
+			sourceTree = "<group>";
+		};
+		74941E2C2329215200E307D6 /* Version 7 */ = {
+			isa = PBXGroup;
+			children = (
+				74941E2D232924E200E307D6 /* SETOCryptorV7.h */,
+				74941E2E232924E200E307D6 /* SETOCryptorV7.m */,
+			);
+			path = "Version 7";
+			sourceTree = "<group>";
+		};
+		74A9FE861D1AD81E000399B6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				74941E312329397900E307D6 /* NSData+SETOBase64urlEncoding.h */,
+				74941E322329397900E307D6 /* NSData+SETOBase64urlEncoding.m */,
+				74CBDF941C5834EF0055121F /* SETOAesSivCipherUtil.c */,
+				74CBDF951C5834EF0055121F /* SETOAesSivCipherUtil.h */,
+				74CBDF9A1C5834EF0055121F /* SETOCryptoSupport.c */,
+				74CBDF9B1C5834EF0055121F /* SETOCryptoSupport.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		74A9FE871D1AD82F000399B6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDF961C5834EF0055121F /* SETOAsyncCryptor.h */,
+				74CBDF971C5834EF0055121F /* SETOAsyncCryptor.m */,
+				74CBDF981C5834EF0055121F /* SETOCryptor.h */,
+				74CBDF991C5834EF0055121F /* SETOCryptor.m */,
+				74A9FE8C1D1C0714000399B6 /* SETOCryptorProvider.h */,
+				74A9FE8D1D1C0714000399B6 /* SETOCryptorProvider.m */,
+				74CBDF9C1C5834EF0055121F /* SETOMasterKey.h */,
+				74CBDF9D1C5834EF0055121F /* SETOMasterKey.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		74A9FE901D1C327E000399B6 /* Version 3 */ = {
+			isa = PBXGroup;
+			children = (
+				74A9FE7E1D1AD5C2000399B6 /* SETOCryptorV3.h */,
+				74A9FE7F1D1AD5C2000399B6 /* SETOCryptorV3.m */,
+			);
+			path = "Version 3";
+			sourceTree = "<group>";
+		};
+		74CBDF6D1C58342F0055121F = {
+			isa = PBXGroup;
+			children = (
+				324A7FFB0DE42FACE6594DEF /* Frameworks */,
+				FC7C0D2153DE8B168208668D /* Pods */,
+				74CBDF781C58342F0055121F /* Products */,
+				74CBDF911C5834EF0055121F /* SETOCryptomatorCryptor */,
+				74CBDF851C58342F0055121F /* SETOCryptomatorCryptorTests */,
+				74CBDFAA1C5834F30055121F /* e_aeswrap */,
+				74CBDFAF1C5834F70055121F /* scrypt */,
+			);
+			sourceTree = "<group>";
+		};
+		74CBDF781C58342F0055121F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDF771C58342F0055121F /* SETOCryptomatorCryptor.framework */,
+				74CBDF811C58342F0055121F /* SETOCryptomatorCryptorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74CBDF791C58342F0055121F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDF7C1C58342F0055121F /* Info.plist */,
+				74CBDF7A1C58342F0055121F /* SETOCryptomatorCryptor.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74CBDF851C58342F0055121F /* SETOCryptomatorCryptorTests */ = {
+			isa = PBXGroup;
+			children = (
+				74E618541C69131D0062027B /* Resources */,
+				74E618571C69131D0062027B /* Supporting Files */,
+				74CBDFBA1C58350C0055121F /* SETOAesSivCipherUtilTests.m */,
+				74345BF31D86D666003B96C5 /* SETOCryptorProviderTests.m */,
+				74CBDF861C58342F0055121F /* SETOCryptorV3Tests.m */,
+				747C75611D79D33A002EAD3B /* SETOCryptorV5Tests.m */,
+				749BD1CB232BBAE2005AE472 /* SETOCryptorV7Tests.m */,
+			);
+			path = SETOCryptomatorCryptorTests;
+			sourceTree = "<group>";
+		};
+		74CBDF911C5834EF0055121F /* SETOCryptomatorCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				74A9FE871D1AD82F000399B6 /* Core */,
+				74CBDF791C58342F0055121F /* Supporting Files */,
+				74A9FE861D1AD81E000399B6 /* Util */,
+				74A9FE901D1C327E000399B6 /* Version 3 */,
+				74E9382D1EF87A410031FC29 /* Version 4 */,
+				747C755C1D79C92C002EAD3B /* Version 5 */,
+				74E938271EF8744A0031FC29 /* Version 6 */,
+				74941E2C2329215200E307D6 /* Version 7 */,
+			);
+			path = SETOCryptomatorCryptor;
+			sourceTree = "<group>";
+		};
+		74CBDFAA1C5834F30055121F /* e_aeswrap */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDFAB1C5834F30055121F /* e_aeswrap.c */,
+				74CBDFAC1C5834F30055121F /* e_aeswrap.h */,
+			);
+			path = e_aeswrap;
+			sourceTree = "<group>";
+		};
+		74CBDFAF1C5834F70055121F /* scrypt */ = {
+			isa = PBXGroup;
+			children = (
+				74CBDFB01C5834F70055121F /* crypto_scrypt.c */,
+				74CBDFB11C5834F70055121F /* crypto_scrypt.h */,
+				74C6B5B5205BCFB0000F04F9 /* insecure_memzero.c */,
+				74C6B5B4205BCFB0000F04F9 /* insecure_memzero.h */,
+				74CBDFB21C5834F70055121F /* sha256.c */,
+				74CBDFB31C5834F70055121F /* sha256.h */,
+				74CBDFB41C5834F70055121F /* sysendian.h */,
+			);
+			path = scrypt;
+			sourceTree = "<group>";
+		};
+		74E618541C69131D0062027B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				742F0F911D79E005002E261F /* ciphertext_v3.aes */,
+				742F0F921D79E005002E261F /* ciphertext_v5.aes */,
+				74E618561C69131D0062027B /* cleartext.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		74E618571C69131D0062027B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74E618581C69131D0062027B /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74E938271EF8744A0031FC29 /* Version 6 */ = {
+			isa = PBXGroup;
+			children = (
+				74E938281EF8746B0031FC29 /* SETOCryptorV6.h */,
+				74E938291EF8746B0031FC29 /* SETOCryptorV6.m */,
+			);
+			path = "Version 6";
+			sourceTree = "<group>";
+		};
+		74E9382D1EF87A410031FC29 /* Version 4 */ = {
+			isa = PBXGroup;
+			children = (
+				74E9382E1EF87A710031FC29 /* SETOCryptorV4.h */,
+				74E9382F1EF87A710031FC29 /* SETOCryptorV4.m */,
+			);
+			path = "Version 4";
+			sourceTree = "<group>";
+		};
+		FC7C0D2153DE8B168208668D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77691E737EDB5B85329FEB98 /* Pods-SETOCryptomatorCryptor.debug.xcconfig */,
+				F49C11DE4F20EB91B39137EB /* Pods-SETOCryptomatorCryptor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		74CBDF741C58342F0055121F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747C755F1D79C950002EAD3B /* SETOCryptorV5.h in Headers */,
+				74CBDFAE1C5834F30055121F /* e_aeswrap.h in Headers */,
+				74CBDFA81C5834EF0055121F /* SETOMasterKey.h in Headers */,
+				74A9FE801D1AD5C2000399B6 /* SETOCryptorV3.h in Headers */,
+				74CBDFA41C5834EF0055121F /* SETOCryptor.h in Headers */,
+				74941E332329397900E307D6 /* NSData+SETOBase64urlEncoding.h in Headers */,
+				74CBDF7B1C58342F0055121F /* SETOCryptomatorCryptor.h in Headers */,
+				74CBDFB81C5834F70055121F /* sha256.h in Headers */,
+				74CBDFB91C5834F70055121F /* sysendian.h in Headers */,
+				74CBDFB61C5834F70055121F /* crypto_scrypt.h in Headers */,
+				74CBDFA11C5834EF0055121F /* SETOAesSivCipherUtil.h in Headers */,
+				74E9382A1EF8746B0031FC29 /* SETOCryptorV6.h in Headers */,
+				74CBDFA71C5834EF0055121F /* SETOCryptoSupport.h in Headers */,
+				74E938301EF87A710031FC29 /* SETOCryptorV4.h in Headers */,
+				74941E2F232924E200E307D6 /* SETOCryptorV7.h in Headers */,
+				74C6B5B6205BCFB0000F04F9 /* insecure_memzero.h in Headers */,
+				74CBDFA21C5834EF0055121F /* SETOAsyncCryptor.h in Headers */,
+				74A9FE8E1D1C0714000399B6 /* SETOCryptorProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		74CBDF761C58342F0055121F /* SETOCryptomatorCryptor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CBDF8B1C58342F0055121F /* Build configuration list for PBXNativeTarget "SETOCryptomatorCryptor" */;
+			buildPhases = (
+				19AC329DC51E75A89290D5AB /* [CP] Check Pods Manifest.lock */,
+				74CBDF721C58342F0055121F /* Sources */,
+				74CBDF731C58342F0055121F /* Frameworks */,
+				74CBDF741C58342F0055121F /* Headers */,
+				74CBDF751C58342F0055121F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SETOCryptomatorCryptor;
+			productName = SETOCryptomatorCryptor;
+			productReference = 74CBDF771C58342F0055121F /* SETOCryptomatorCryptor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		74CBDF801C58342F0055121F /* SETOCryptomatorCryptorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CBDF8E1C58342F0055121F /* Build configuration list for PBXNativeTarget "SETOCryptomatorCryptorTests" */;
+			buildPhases = (
+				74CBDF7D1C58342F0055121F /* Sources */,
+				74CBDF7E1C58342F0055121F /* Frameworks */,
+				74CBDF7F1C58342F0055121F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74CBDF841C58342F0055121F /* PBXTargetDependency */,
+			);
+			name = SETOCryptomatorCryptorTests;
+			productName = SETOCryptomatorCryptorTests;
+			productReference = 74CBDF811C58342F0055121F /* SETOCryptomatorCryptorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74CBDF6E1C58342F0055121F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SETO;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = Skymatic;
+				TargetAttributes = {
+					74CBDF761C58342F0055121F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					74CBDF801C58342F0055121F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 74CBDF711C58342F0055121F /* Build configuration list for PBXProject "SETOCryptomatorCryptor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74CBDF6D1C58342F0055121F;
+			productRefGroup = 74CBDF781C58342F0055121F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74CBDF761C58342F0055121F /* SETOCryptomatorCryptor */,
+				74CBDF801C58342F0055121F /* SETOCryptomatorCryptorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74CBDF751C58342F0055121F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CBDF7F1C58342F0055121F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742F0F941D79E02A002E261F /* ciphertext_v3.aes in Resources */,
+				742F0F931D79E028002E261F /* ciphertext_v5.aes in Resources */,
+				74E6185A1C69131D0062027B /* cleartext.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19AC329DC51E75A89290D5AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SETOCryptomatorCryptor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74CBDF721C58342F0055121F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E9382B1EF8746B0031FC29 /* SETOCryptorV6.m in Sources */,
+				74E938311EF87A710031FC29 /* SETOCryptorV4.m in Sources */,
+				74CBDFA01C5834EF0055121F /* SETOAesSivCipherUtil.c in Sources */,
+				74A9FE811D1AD5C2000399B6 /* SETOCryptorV3.m in Sources */,
+				74941E30232924E200E307D6 /* SETOCryptorV7.m in Sources */,
+				74CBDFA31C5834EF0055121F /* SETOAsyncCryptor.m in Sources */,
+				74CBDFA51C5834EF0055121F /* SETOCryptor.m in Sources */,
+				74CBDFA61C5834EF0055121F /* SETOCryptoSupport.c in Sources */,
+				74A9FE8F1D1C0714000399B6 /* SETOCryptorProvider.m in Sources */,
+				74CBDFA91C5834EF0055121F /* SETOMasterKey.m in Sources */,
+				74C6B5B7205BCFB0000F04F9 /* insecure_memzero.c in Sources */,
+				74CBDFAD1C5834F30055121F /* e_aeswrap.c in Sources */,
+				74941E342329397900E307D6 /* NSData+SETOBase64urlEncoding.m in Sources */,
+				74CBDFB51C5834F70055121F /* crypto_scrypt.c in Sources */,
+				74CBDFB71C5834F70055121F /* sha256.c in Sources */,
+				747C75601D79C950002EAD3B /* SETOCryptorV5.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CBDF7D1C58342F0055121F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747C75621D79D33A002EAD3B /* SETOCryptorV5Tests.m in Sources */,
+				74345BF41D86D666003B96C5 /* SETOCryptorProviderTests.m in Sources */,
+				749BD1CC232BBAE2005AE472 /* SETOCryptorV7Tests.m in Sources */,
+				74CBDFBB1C58350C0055121F /* SETOAesSivCipherUtilTests.m in Sources */,
+				74CBDF871C58342F0055121F /* SETOCryptorV3Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74CBDF841C58342F0055121F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74CBDF761C58342F0055121F /* SETOCryptomatorCryptor */;
+			targetProxy = 74CBDF831C58342F0055121F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74CBDF891C58342F0055121F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74CBDF8A1C58342F0055121F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		74CBDF8C1C58342F0055121F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77691E737EDB5B85329FEB98 /* Pods-SETOCryptomatorCryptor.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SETOCryptomatorCryptor/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cryptomator.SETOCryptomatorCryptor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		74CBDF8D1C58342F0055121F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F49C11DE4F20EB91B39137EB /* Pods-SETOCryptomatorCryptor.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SETOCryptomatorCryptor/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cryptomator.SETOCryptomatorCryptor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		74CBDF8F1C58342F0055121F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SETOCryptomatorCryptorTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cryptomator.SETOCryptomatorCryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74CBDF901C58342F0055121F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SETOCryptomatorCryptorTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cryptomator.SETOCryptomatorCryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74CBDF711C58342F0055121F /* Build configuration list for PBXProject "SETOCryptomatorCryptor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CBDF891C58342F0055121F /* Debug */,
+				74CBDF8A1C58342F0055121F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CBDF8B1C58342F0055121F /* Build configuration list for PBXNativeTarget "SETOCryptomatorCryptor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CBDF8C1C58342F0055121F /* Debug */,
+				74CBDF8D1C58342F0055121F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CBDF8E1C58342F0055121F /* Build configuration list for PBXNativeTarget "SETOCryptomatorCryptorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CBDF8F1C58342F0055121F /* Debug */,
+				74CBDF901C58342F0055121F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74CBDF6E1C58342F0055121F /* Project object */;
+}

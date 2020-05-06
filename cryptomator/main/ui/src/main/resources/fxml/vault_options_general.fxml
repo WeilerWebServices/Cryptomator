@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+	  xmlns:fx="http://javafx.com/fxml"
+	  fx:controller="org.cryptomator.ui.vaultoptions.GeneralVaultOptionsController"
+	  spacing="6">
+	<padding>
+		<Insets topRightBottomLeft="12"/>
+	</padding>
+	<children>
+		<CheckBox text="%vaultOptions.general.unlockAfterStartup" fx:id="unlockOnStartupCheckbox"/>
+	</children>
+</VBox>

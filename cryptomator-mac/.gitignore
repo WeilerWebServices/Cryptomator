@@ -1,0 +1,7 @@
+# created during build
+buildkit.zip
+buildkit/
+libMacFunctions.dylib
+runtimeImage/
+Cryptomator.zip
+*.dmg
